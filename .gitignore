@@ -1,0 +1,11 @@
+db.sqlite3
+/db.sqlite3
+.git
+/.git
+/.vscode
+.vscode
+/app/__pycache__
+app/__pycache__
+main/__init__
+main/__pycache__
+

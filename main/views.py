@@ -1,4 +1,6 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'main/index.html')
+    test = 5
+    result = test + 10
+    return render(request, 'main/index.html', {"result": result})

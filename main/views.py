@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
 def index(request):
-    test = 5
-    result = test + 10
-    return render(request, 'main/index.html', {"result": result})
+    context = {
+        'title':'Home page',
+        'h1content':'Магазин мебели HOME!'
+    }
+    return render(request, 'main/index.html', context=context)

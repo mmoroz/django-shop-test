@@ -1,17 +1,20 @@
-<!DOCTYPE html>
+{% extends "main/base.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png'%}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png'%}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png'%}">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-</head>
-<body>
-    <h1 class="text-black-50">Hello, world!</h1>
-    <input type="text" class="form-control">
-</body>
-</html>
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock css %}
+
+
+{% block content %}
+    <h1 class="mt-5 pt-5"><strong>{{ h1content }}</strong></h1>
+{% endblock content %}
+
+
+{% block footer %}
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Home Python Hub Studio 2023</p>
+        </div>
+    </footer>
+{% endblock footer %}
